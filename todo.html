@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="todo.css" />
+  </head>
+  <body>
+    <button id="theme">🌙</button>
+    <!-- ==============    CONTAINER    ============      -->
+    <div class="card">
+      <!-- ==============    HEADER/TITLE    ============      -->
+      
+        <h1 class="heading">To-Do App</h1>
+      
+
+      <!-- ==============    PROGRESS - SECTION    ============      -->
+
+      <section class="progress-section">
+        <!-- ==============    TOP PART : LABEL AND PERCENTAGE    ============      -->
+        <div class="progress-header">
+          <p id="progress-title">Progress!</p>
+          <div id="progressCount">
+            <span id="completedCount">0</span>/<span id="totalCount">0</span>
+          </div>
+        </div>
+        <div class="progress-bar">
+          <div id="progress-fill"></div>
+        </div>
+      </section>
+
+      <!-- ==============    INPUT - SECTION    ============      -->
+      <div class="input-area">
+        <input
+          type="text"
+          name=""
+          id="task-input"
+          placeholder="Add a new task..."
+        />
+        <button id="addbtn" type="submit">+</button>
+      </div>
+
+      <!-- ==============    TASK - LIST    ============      -->
+
+      <div class="task-container">
+        <ul id="task-list"></ul>
+        <img
+          src="man-working-checklist-background.png"
+          class="emptyimg"
+          alt=""
+        />
+      
+    </div>
+    <script src="todo.js"></script>
+  </body>
+</html>

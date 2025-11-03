@@ -1,0 +1,376 @@
+@import url("https://fonts.googleapis.com/css2?family=Ancizar+Sans:ital,wght@0,100..1000;1,100..1000&family=Ancizar+Serif:ital,wght@0,300..900;1,300..900&family=Carter+One&family=Montserrat:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(135deg, #2b1055, #7597de);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  position: relative;
+}
+#theme {
+  position: absolute;
+  width: 30px;
+  aspect-ratio: 1;
+  top: 15px;
+  left: 15px;
+  background: transparent;
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+/* ===================== LIGHT MODE ===================== */
+body.light-mode {
+  background: linear-gradient(90deg, #ffd6eb, #ffffff);
+  color: #222; /* darker text for visibility */
+}
+
+/* Make the card bright and text dark */
+body.light-mode .card {
+  background: rgba(255, 255, 255, 0.9);
+  color: #222;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgb(201, 77, 98);
+}
+
+/* Ensure headings and text elements switch color */
+body.light-mode .heading,
+body.light-mode p,
+body.light-mode span,
+body.light-mode label,
+body.light-mode input,
+body.light-mode button {
+  color: rgb(201, 77, 98);
+}
+body.light-mode .progress-section {
+  border: 1px solid rgb(201, 77, 98);
+  &:hover {
+    box-shadow: 0 0 10px rgb(201, 77, 98);
+  }
+}
+body.light-mode #progressCount {
+  color: rgb(201, 77, 98);
+  background: linear-gradient(90deg, #ff4f81, #ffb6c1);
+  box-shadow: 0 0 10px;
+  border: 1px solid rgb(201, 77, 98);
+}
+body.light-mode .progress-bar {
+  background: rgb(170, 148, 152);
+}
+body.light-mode #progress-fill {
+  background: linear-gradient(135deg, #ff4f81, #ffb6c1);
+}
+
+body.light-mode .emptyimg {
+  filter: hue-rotate(180deg) brightness(1) saturate(6);
+  -webkit-filter: hue-rotate(180deg) brightness(1) saturate(6);
+  mix-blend-mode: multiply;
+  opacity: 0.9;
+}
+body.light-mode input {
+  background: #fff;
+  border: 1px solid #ccc;
+  color: rgb(201, 77, 98);
+}
+body.light-mode .input-area {
+  background: rgba(239, 193, 238, 0.8);
+  border: 1px solid rgb(201, 77, 98);
+  &:hover {
+    box-shadow: 0 0 10px rgb(201, 77, 98);
+  }
+}
+body.light-mode input::placeholder {
+  color: rgb(201, 77, 98);
+}
+body.light-mode #addbtn {
+  color: #fff;
+  background: rgb(201, 77, 98);
+  &:hover {
+    box-shadow: 0 0 10px rgb(201, 77, 98);
+  }
+}
+
+body.light-mode .checkbox {
+  accent-color: rgb(201, 77, 98);
+}
+
+body.light-mode li {
+  background: rgba(239, 193, 238, 0.8);
+  &:hover {
+    box-shadow: 0 0 10px rgb(201, 77, 98);
+  }
+}
+
+body.light-mode .delete-btn {
+  background: rgb(201, 77, 98);
+  color: #fff;
+}
+body.light-mode .edit-btn {
+  background: rgb(201, 77, 98);
+  color: #fff;
+}
+body.light-mode .card::-webkit-scrollbar {
+  width: 8px;
+}
+
+body.light-mode .card::-webkit-scrollbar-track {
+  background: rgba(255, 192, 203, 0.2);
+  border-radius: 10px;
+}
+
+body.light-mode .card::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #ff69b4, #ffc0cb);
+  border-radius: 10px;
+}
+
+body.light-mode .card::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #ff1493, #ffb6c1);
+}
+
+/*========================================DARK MODE=================================================*/
+.card {
+  height: 30rem;
+  width: 20rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  overflow-y: scroll;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  backdrop-filter: blur(20px);
+  padding: 25px;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+.heading {
+  font-family: "Playfair Display", sans-serif;
+  color: #fff;
+  font-size: 2em;
+  text-align: center;
+  font-family: cursive;
+}
+.progress-section {
+  padding: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  &:hover {
+    box-shadow: 0 0 10px #2b1055;
+  }
+}
+.progress-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+#progress-title {
+  font-family: "Playfair Display", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+#progressCount {
+  width: 40px;
+  aspect-ratio: 1;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background: linear-gradient(135deg, #7597de, #2b1055);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  box-shadow: 0 0 10px #7597de;
+}
+.progress-bar {
+  background: rgba(255, 255, 255, 0.2);
+  height: 5px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  overflow: hidden;
+}
+#progress-fill {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, #7597de, #2b1055);
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  -webkit-border-radius: z;
+  transition: width 0.3s ease-in-out;
+  -webkit-transition: width 0.3s ease-in-out;
+  -moz-transition: width 0.3s ease-in-out;
+  -ms-transition: width 0.3s ease-in-out;
+  -o-transition: width 0.3s ease-in-out;
+}
+.input-area {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  &:hover {
+    box-shadow: 0 0 10px #2b1055;
+    background: rgba(255, 255, 255, 0.15);
+  }
+}
+.input-area input::placeholder {
+  color: #fff;
+}
+#task-input {
+  background: transparent;
+  flex: 1;
+  border: none;
+  padding: 6px;
+  color: #fff;
+  outline: none;
+}
+#addbtn {
+  padding: 5px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: transparent;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  &:hover {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    box-shadow: 0 0 10px #2b1055;
+  }
+}
+.task-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.emptyimg {
+  height: 10rem;
+  aspect-ratio: 1;
+}
+#task-list {
+  width: 100%;
+  margin-top: 10px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+li {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  &:hover {
+    box-shadow: 0 0 10px #2b1055;
+  }
+}
+li.completed span {
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+.taskLeft {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.checkbox {
+  width: 18px;
+  aspect-ratio: 1;
+  accent-color: #7597de;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.delete-btn {
+  background: #7597de;
+  border: none;
+  color: #fff;
+  width: 25px;
+  aspect-ratio: 1;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.edit-btn {
+  background: #7597de;
+  border: none;
+  color: #fff;
+  width: 25px;
+  aspect-ratio: 1;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.card::-webkit-scrollbar {
+  width: 8px;
+}
+
+.card::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.card::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #2b1055, #7597de);
+  border-radius: 10px;
+}
+
+.card::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #4b21a5, #88a9f2);
+}
