@@ -72,6 +72,12 @@ body.light-mode .emptyimg {
   -webkit-filter: hue-rotate(180deg) brightness(1) saturate(6);
   mix-blend-mode: multiply;
   opacity: 0.9;
+  &:hover {
+    filter: hue-rotate(180deg) brightness(1) saturate(6)
+      drop-shadow(0 0 10px rgb(236, 7, 45));
+    mix-blend-mode: multiply;
+    opacity: 0.9;
+  }
 }
 body.light-mode input {
   background: #fff;
@@ -283,6 +289,10 @@ body.light-mode .card::-webkit-scrollbar-thumb:hover {
 .emptyimg {
   height: 10rem;
   aspect-ratio: 1;
+}
+.emptyimg:hover {
+  filter: drop-shadow(0 0 10px #2b1055);
+  -webkit-filter: drop-shadow(0 0 10px #2b1055);
 }
 #task-list {
   width: 100%;
