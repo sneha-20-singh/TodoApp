@@ -101,7 +101,10 @@ body.light-mode #addbtn {
     box-shadow: 0 0 10px rgb(201, 77, 98);
   }
 }
-
+body.light-mode .btns {
+  background: linear-gradient(90deg, #ff4f81, #ffb6c1);
+  color: rgb(136, 50, 64);
+}
 body.light-mode .checkbox {
   accent-color: rgb(201, 77, 98);
 }
@@ -280,6 +283,29 @@ body.light-mode .card::-webkit-scrollbar-thumb:hover {
     box-shadow: 0 0 10px #2b1055;
   }
 }
+.buttons {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.btns {
+  background: linear-gradient(90deg, #7597de, #2b1055);
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  color: #fff;
+  border: none;
+  height: 35px;
+  width: 5rem;
+  &:hover {
+    transform: scale(0.88);
+    -webkit-transform: scale(0.88);
+    -moz-transform: scale(0.88);
+    -ms-transform: scale(0.88);
+    -o-transform: scale(0.88);
+  }
+}
 .task-container {
   display: flex;
   align-items: center;
@@ -305,6 +331,7 @@ ul {
   margin: 0;
 }
 li {
+  width: 100%;
   background: rgba(255, 255, 255, 0.15);
   padding: 10px;
   margin-bottom: 10px;
@@ -328,11 +355,16 @@ li.completed span {
   display: flex;
   align-items: center;
   gap: 10px;
+  overflow: hidden;
+  flex-grow: 1;
+  text-overflow: ellipsis;
+  margin-right: 10px;
 }
 .checkbox {
   width: 18px;
   aspect-ratio: 1;
   accent-color: #7597de;
+  flex-shrink: 0;
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -346,6 +378,7 @@ li.completed span {
   width: 25px;
   aspect-ratio: 1;
   cursor: pointer;
+  flex-shrink: 0;
   font-weight: bold;
   border-radius: 50%;
   -webkit-border-radius: 50%;
@@ -358,9 +391,11 @@ li.completed span {
   border: none;
   color: #fff;
   width: 25px;
+  flex-shrink: 0;
   aspect-ratio: 1;
   cursor: pointer;
   font-weight: bold;
+  margin-right: 3px;
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;

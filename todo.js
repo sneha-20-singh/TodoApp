@@ -10,7 +10,9 @@ const img = document.querySelector(".emptyimg");
 const msg = document.getElementById("progress-title");
 const theme = document.getElementById("theme");
 const body = document.querySelector("body");
-
+const activeBtn = document.getElementById("activeBtn");
+const completedBtn = document.getElementById("completedBtn");
+const showAll = document.getElementById("showAll");
 // ================function upadte progress bar ==================
 function updateProgress() {
   const totalTasks = taskList.querySelectorAll("li").length;
@@ -151,6 +153,29 @@ btn.addEventListener("click", (event) => {
   checksEmptyState();
   //clear input
   input.value = "";
+});
+activeBtn.addEventListener("click", () => {
+  document.querySelectorAll("li").forEach((li) => {
+    if (li.classList.contains("completed")) {
+      li.style.display = "none";
+    } else {
+      li.style.display = "flex";
+    }
+  });
+});
+completedBtn.addEventListener("click", () => {
+  document.querySelectorAll("li").forEach((li) => {
+    if (li.classList.contains("completed")) {
+      li.style.display = "flex";
+    } else {
+      li.style.display = "none";
+    }
+  });
+});
+showAll.addEventListener("click", () => {
+  document.querySelectorAll("li").forEach((li) => {
+    li.style.display = "flex";
+  });
 });
 showTask();
 //});
