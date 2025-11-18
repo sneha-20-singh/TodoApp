@@ -104,8 +104,7 @@ git clone https://github.com/sneha-20-singh/TodoApp.git
 
 
 If you found this To-Do App interesting, please consider giving it a ⭐ 
-
-    Made with ❤️ by Sneha Singh
+Made with ❤️ by Sneha Singh
 
 </div>
 
